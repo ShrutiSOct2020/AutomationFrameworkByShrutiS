@@ -9,22 +9,24 @@ import base.LaunchBrowser;
 
 public class CreateAccountPage extends LaunchBrowser {
 	 
-	WebDriverWait wait;
+	WebDriverWait wait = new WebDriverWait(driver, 30);
 	public void enterCreateAccountDetails() {
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("id_gender1"))).click();
-		System.out.println("Select Mr. as title");
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("uniform-id_gender2"))).click();
+		System.out.println("Select Mrs. as title");
 
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("customer_firstname"))).sendKeys("automation");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='customer_firstname']")))
+		.sendKeys("Shruti");
 		System.out.println("Enter First Name");
 
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("customer_lastname"))).sendKeys("automation");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='customer_lastname']")))
+		.sendKeys("Sattigeri");
 		System.out.println("Enter Last Name");
 
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("passwd"))).sendKeys("automation");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='passwd']"))).sendKeys("Shru1234$");
 		System.out.println("Enter Password");
 
 		//wait.until(ExpectedConditions.visibilityOfElementLocated((By.id("uniform-days")))).click();
-		Select s = new Select(driver.findElement(By.id("days")));
+		Select s = new Select(driver.findElement(By.xpath("//select[@name='days']")));
 		s.selectByValue("6");
 		System.out.println("Birthdate selected from drop down");
 
@@ -64,8 +66,8 @@ public class CreateAccountPage extends LaunchBrowser {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("phone_mobile"))).sendKeys("8905714840");
 		System.out.println("Mobile number is entered");
 
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("submitAccount"))).click();
-		System.out.println("Details Registered in Application");
+		/*wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@value='My address']"))).sendKeys("8905714840");
+		System.out.println("Details Registered in Application");*/
 	}
 	public MyProfilePage clickOnRegistration() {
 		wait = new WebDriverWait(driver,30);
