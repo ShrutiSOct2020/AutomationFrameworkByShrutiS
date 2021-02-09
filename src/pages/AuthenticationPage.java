@@ -11,7 +11,7 @@ public class AuthenticationPage extends LaunchBrowser{
 	public void enterEmailAddress(String id) {
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email_create")))
-		.sendKeys("automation1@gmail.com");
+		.sendKeys(id);
 		System.out.println("Enter email addressfor the create user name");
 	}
 	
@@ -21,5 +21,4 @@ public class AuthenticationPage extends LaunchBrowser{
 		System.out.println("Clicked on the submit button to fill the other details");
 		return new CreateAccountPage();
 	}
-
 }

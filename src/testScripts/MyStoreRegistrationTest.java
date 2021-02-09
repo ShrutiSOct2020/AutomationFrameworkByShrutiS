@@ -18,18 +18,18 @@ import pages.MyProfilePage;
 public class MyStoreRegistrationTest {
 
 	@Test
-	public void automationPracticeLogin() {
+	public void MyStoreLogin() throws InterruptedException {
 		LaunchBrowser.start();
 		HomePage homePage = new HomePage();
 		AuthenticationPage authenticationPage = homePage.clickOnSignIn();
 		System.out.println("Navigate to Authentication Page");
-		authenticationPage.enterEmailAddress("shrutis@gmail.com");
+		authenticationPage.enterEmailAddress("shrutisattigeri@gmail.com");
 		CreateAccountPage createAccount = authenticationPage.clickOnCreateAnAccount();
 		System.out.println("Navigate to create account page");
 		createAccount.enterCreateAccountDetails();
 		MyProfilePage myProfilePage = createAccount.clickOnRegistration();
 		String actual = myProfilePage.getHeaderText();
-		String expected = "automation automation";
+		String expected = "Shruti Sattigeri";
 		Assert.assertEquals(actual, expected, "Verification of headertext failed");
 	}
 }
