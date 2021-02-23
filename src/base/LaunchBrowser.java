@@ -15,4 +15,8 @@ public class LaunchBrowser {
 		driver.get("http://automationpractice.com/index.php");
 		System.out.println("Navigate to Application");
 	}
+	public static void close() {
+		driver.close();
+	}
+	
 }
