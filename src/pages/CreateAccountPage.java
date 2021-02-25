@@ -182,13 +182,13 @@ public class CreateAccountPage extends LaunchBrowser {
 		System.out.println("Details Registered in Application");
 		return new MyProfilePage();
 	}
-	
-	public List<String> getErrorMessage(){
+
+	public List<String> getErrorMessage() {
 		List<WebElement> listOfErrorElements = driver.findElements(By.cssSelector("ol>li"));
 		List<String> listOfErrorText = new ArrayList<String>();
 		String errorHeadText = driver.findElement(By.cssSelector(".alert.alert-danger>p")).getText();
 		listOfErrorText.add(errorHeadText);
-		for(WebElement ele : listOfErrorElements) {
+		for (WebElement ele : listOfErrorElements) {
 			listOfErrorText.add(ele.getText());
 		}
 		return listOfErrorText;
