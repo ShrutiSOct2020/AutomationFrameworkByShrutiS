@@ -229,8 +229,8 @@ public class MyStoreRegistrationTest extends BaseTest {
 	 * "Authentication Header not displayed");
 	 * 
 	 * System.out.println("Step -  Enter the email id ");
-	 * authenticationPage.enterEmailAddress(email); CreateAccountPage createAccount
-	 * = authenticationPage.clickOnCreateAnAccount();
+	 * authenticationPage.enterEmailAddress(email); 
+	 * CreateAccountPage createAccount = authenticationPage.clickOnCreateAnAccount();
 	 * 
 	 * System.out.println("Verify Create Account heading is displayed"); boolean
 	 * isHeadingDispalyed = createAccount.isAccountPageHeadingTextDisplayed();
@@ -238,9 +238,8 @@ public class MyStoreRegistrationTest extends BaseTest {
 	 * "Create Account heading not displayed");
 	 * 
 	 * System.out.println("Navigate to create account page");
-	 * FillCreateAccountDetailsPojo accountDetailsPojo = new
-	 * FillCreateAccountDetailsPojo(); boolean mFlag =
-	 * gender.equalsIgnoreCase("male") ? true : false;
+	 * FillCreateAccountDetailsPojo accountDetailsPojo = new FillCreateAccountDetailsPojo(); 
+	 * boolean mFlag = gender.equalsIgnoreCase("male") ? true : false;
 	 * accountDetailsPojo.setMale(mFlag);
 	 * accountDetailsPojo.setFirstName(firstName);
 	 * accountDetailsPojo.setLastName(lastName);
